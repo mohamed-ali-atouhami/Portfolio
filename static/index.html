@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7617875c1f.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <div id="head">
+        <div class="container">
+            <nav>
+                <h2 class="logo">Atou<span>hami.</span></h2>
+                <ul id="sidemenu">
+                    <li> <a href="#head">Home</a></li>
+                    <li> <a href="#about">About</a></li>
+                    <li> <a href="#services">Services</a></li>
+                    <li> <a href="#projects">Projects</a></li>
+                    <li> <a href="#contact">Contact us</a></li>
+                    <i class="fas fa-times" id="times"></i>
+                </ul>
+                <i class="fas fa-bars" id="bars"></i>
+            </nav>
+            <div class="contaner">
+                <div class="row">
+                    <div   data-aos="fade-up-right" class="header-text">
+                        <p>full stack web devloper</p>
+                        <h1>Hi, I'm <span>Atouhami</span><br>ali From Morocco</h1>
+                    </div>
+                    <div  data-aos="fade-up-left" class="col1">
+                        <img src="images/milomanti7ox.jpg" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----------about----------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div  data-aos="fade-up-right" class="col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <h3 class="sub-title1"> student at ISTA NTIC</h3>
+                    <p class="p">I spent my last years training as a digital development intern in which I had an experience that allowed me to obtain soft skills and hard skills.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('technologies')">Technologies I work with</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('interest')">Interest</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="technologies">
+                        <ul>
+                            <li><span>Frontend</span><br><br><span>↪</span> HTML<br><span>↪</span> CSS<br><span>↪</span> Bootstrap<br><span>↪</span> JavaScript<br><span>↪</span> JeQuery<br><span>↪</span> React</li><br>
+                            <li><span>Backend</span><br><br><span>↪</span> MySQL<br><span>↪</span> PHP<br><span>↪</span> LARAVEL<br><span>↪</span> Python (Tkinter,turtle ...)</li><br>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="interest">
+                        <ul>
+                            <li><span>Voyage</span></li><br>
+                            <li><span>Sport</span></li><br>
+                            <li><span>Chess</span></li><br>
+                            <!-- <li><span>2021 - Current</span><br> UI/UX Design Training at NTIC</li><br>
+                            <li><span>2019 - 2021</span><br>Team lead at StarApp LLC.</li><br>
+                            <li><span>2017 - 2019</span><br> UI/UX Design Executive at World Digital Wdt.</li><br>
+                            <li><span>2016 - 2017</span><br>Intership at ropap eCommerce.</li> -->
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-Present</span><br><br><span>↪</span>  Development Digital Training at NTIC.</li><br>
+                            <li><span>2020-2021</span><br><br><span>↪</span>  Bacalaureat scientist option pc.</li><br>
+                        </ul>
+                    </div>
+                </div>
+                <div data-aos="fade-up-left" class="col-1">
+                    <img src="images/WhatsApp Image 2023-01-10 at 12.50.01 AM.jpeg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------------servecices---------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div data-aos="flip-right">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Frontend Development</h2>
+                    <a href="#">Learn more</a>
+                </div>
+                <div data-aos="flip-down">
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Backend Development</h2>
+                    <a href="#">Learn more</a>
+                </div>
+                <div data-aos="flip-left">
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Manipulate Data Base</h2>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------------projects-------------- -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <!-- <h5>My recent work</h5> -->
+            <div class="work-list">
+                <div data-aos="flip-right"  class="work">
+                    <img src="images/calculator.jpg">
+                    <div class="layer">
+                        <h3>Calculator</h3>
+                        <p> It does evrything a calculator does </p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div data-aos="flip-down" class="work">
+                    <img src="images/test.jpg">
+                    <div class="layer">
+                        <h3>Test Website</h3>
+                        <p> Test About HTML CSS and JavaScript
+                        </p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div data-aos="flip-left" class="work">
+                    <img src="images/coffee.jpg">
+                    <div class="layer">
+                        <h3>Cofee Shopping Website</h3>
+                        <p> you can order coffees
+                        </p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- ----------------contact-------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div data-aos="fade-up-right"  class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>mohamedaligamer23@gmail.com</p>
+                    <p><i class="fa-brands fa-whatsapp"></i>0707582164</p>
+                    <div class="sociale-icones">
+                        <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a target="_blank" href="images/Mohamed_Ali Atouhami_CV.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div data-aos="fade-up-left"  class="contact-right">
+                    <form>
+                        <input type="text" id="input-name" name="Name" placeholder="Enter your Name" required>
+                        <input type="email" id="input-email" name="Email" placeholder="Enter your Email" required>
+                        <textarea name="Message" id="input-message" rows="6" placeholder="Enter your Message"></textarea>
+                        <button type="submit" id="submit-email" class="btn btn2">Submit</button>
+                        <!-- <input type="submit" value="submit"> the same as input sub.. -->
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right">
+            <p> Copyright ©  Atouhami. Made with <i class="fa-solid fa-heart"></i> by Med ali</p>
+        </div>
+    </div>
+    <script>
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+    <script>
+        document.getElementById("times").addEventListener("click",()=>{
+            document.getElementById("sidemenu").style="right:-200px"
+        }
+            
+        )
+        document.getElementById("bars").addEventListener("click",()=>{
+            document.getElementById("sidemenu").style="right:0"
+        }
+            
+        )
+    </script>
+    
+    <script>
+        AOS.init();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,466 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #080808;
+    color: #fff;
+}
+/* #head{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.jpg); 
+    background-size: cover;
+    background-position: center; 
+} */
+/* .header{ the header will be fixed in the top but fiha l5dma
+    background-color: #080808;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    display: flex;
+    
+} */
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+/* #sidemenu{ this important when the header is fixed
+    display: flex;
+    align-items: center;
+    margin-left: 15rem;
+} */
+.logo{
+    color: #ff004f;
+    font-size: 55px;
+
+}
+span{
+    color: #fff;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size:18px ;
+    position: relative;
+}
+nav ul li a::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    flex-basis: 50%;
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text p{
+    text-transform: capitalize;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.col1{
+    flex-basis: 50%;
+}
+.col1 img{
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    /* margin-top: 20px; */
+    margin: 20% 20%;
+}
+/* -------about------- */
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.col-1{
+    flex-basis: 35%;
+}
+.col-1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+.col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+   font-size: 60px;
+   font-weight: 600px;
+   color: #fff;
+}
+.sub-title1{
+    font-weight: 600px;
+    color: #b54769;
+    margin: 1rem 1rem ;
+}
+.p{
+    margin: 0 1rem  
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px ;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/* ------------SERVICES---------- */
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s,transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+.services-list div a{
+    text-decoration: none;
+    color: rgb(157, 151, 151);
+    font-size: 15px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div a:hover{
+    color: #fff;
+}
+.services-list div:hover{
+    background: #ff004f ;
+    transform: translateY(-10px);
+}
+/* ------------projects----------- */
+#projects{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    font-size: 14px;
+    text-align: center;
+    transition: height 0.5s ;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    font-size: 18px;
+    line-height: 60px ;
+    text-decoration: none ;
+    background: #fff ;
+    width: 60px ;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    text-decoration: none ;
+    color:#fff ;
+    border-radius: 6px;
+    margin: 50px auto;
+    display: block;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding:  14px 50px;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+/* ------------contact--------- */
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    font-size: 25px;
+    margin-right: 15px;
+}
+.sociale-icones{
+    margin-top: 30px;
+}
+.sociale-icones a{
+    text-decoration: none;
+    margin-right: 15px;
+    color: #ababab;
+    font-size: 30px;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.sociale-icones a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    outline: none;
+    border: 0;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copy-right{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copy-right i{
+    color: #ff004f;
+}
+/* ---------------small screen css------------- */
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width:1002px) {
+    /* #head{
+        background-image: url(images/background1.jpg);
+    } */
+    .col1 , .header-text{
+        flex-basis: 100%;
+    }
+    .col1{
+        margin-bottom:30px;
+    }
+    .col1 img{
+        width: 70%;
+        height: 70%;
+        border-radius: 50%;
+        margin-left: 17%;
+        margin-bottom: 10px;
+        margin-top: 10%;
+        
+    }
+    .header-text{
+        margin-top: 20%;
+        font-size: 20px;
+        margin-left: 15%;
+        
+    }
+    .header-text h1{
+        font-size: 45px;
+    }
+    nav .logo{
+        font-size: 40px;
+    }
+    nav .fas{
+        display: block;
+        font-size:25px ;
+        cursor: pointer;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top:50px ;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    #about{
+        margin-top: 20%;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .col-1 , .col-2{
+        flex-basis: 100%;
+    }
+    .col-1{
+        margin-bottom: 30px;
+    }
+    .col-1 img{
+        width: 80%;
+        height: 80%;
+        border-radius: 15px;
+        margin-top: 30%;
+    }
+    .col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left , .contact-right{
+        flex-basis: 100%;
+    }
+    .copy-right{
+        font-size: 15px;
+        
+    }
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
