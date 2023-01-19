@@ -7,11 +7,20 @@ dotenv.config()
 const app = express()
 const port = 9999 || process.env.PORT
 
-app.use(express.static("static"))
+app.use(express.static(path.resolve(process.cwd(), "static")));
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-
+app.get("*", (_, res) => {
+	res.sendFile(
+		path.join(process.cwd(), "./static/index.html"),
+		(err) => {
+			if(err) {
+				res.status(500).send(err)
+			}
+		}
+	)
+})
 app.post('/sendEmail', (req, res) => {
     try {
         
