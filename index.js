@@ -2,6 +2,7 @@ import express from "express"
 import nodemailer from "nodemailer"
 import bodyParser from "body-parser"
 import dotenv from "dotenv"
+import path from "path"
 
 dotenv.config()
 const app = express()
