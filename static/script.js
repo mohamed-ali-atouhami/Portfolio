@@ -1,4 +1,4 @@
-
+const mesag=document.getElementById("msg")
 const email_btn=document.getElementById("submit-email")
 const inptname=document.getElementById("input-name")
 const inptemail=document.getElementById("input-email")
@@ -11,5 +11,9 @@ email_btn.addEventListener("click",(e)=>{
     }).catch(err=>{
         console.log(err)
     })
+    mesag.innerHTML=" Message sent succesfuly "
+        setTimeout(()=>{
+            mesag.innerHTML=''
+        },3000)
 }
 )
