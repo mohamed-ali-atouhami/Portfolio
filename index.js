@@ -1,27 +1,17 @@
 import express from "express"
 import nodemailer from "nodemailer"
-import bodyParser from "body-parser"
 import dotenv from "dotenv"
 import path from "path"
 
 dotenv.config()
 const app = express()
-const port = 9999 || process.env.PORT
+const port = process.env.PORT || 9999
 
 app.use(express.static(path.resolve(process.cwd(), "static")));
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
-app.get("*", (_, res) => {
-	res.sendFile(
-		path.join(process.cwd(), "./static/index.html"),
-		(err) => {
-			if(err) {
-				res.status(500).send(err)
-			}
-		}
-	)
-})
+// API route must come BEFORE the catch-all route
 app.post('/sendEmail', (req, res) => {
     try {
         
@@ -35,6 +25,7 @@ app.post('/sendEmail', (req, res) => {
         });
          
         let mailDetails = {
+            from: `Portfolio <${process.env.EMAIL}>`,
             to: process.env.EMAIL,
             subject: 'Hi Mohammed Ali',
             text: `name:${name} \nemail:${email} \nmessage:${message}`
@@ -42,14 +33,31 @@ app.post('/sendEmail', (req, res) => {
          
         mailTransporter.sendMail(mailDetails, function(err, data) {
             if(err) {
-                console.log(err)
-                res.status(404).json('Error Occurs');
+                console.error('Email sending error:', err);
+                res.status(500).json({ error: 'Failed to send email', details: err.message });
             } else {
-                res.status(200).json('Email sent successfully');
+                console.log('Email sent successfully');
+                res.status(200).json({ message: 'Email sent successfully' });
             }
         });
     } catch (error) {
+        console.error("Email error:", error);
         res.status(500).json("Something went wrong")
     }
 })
-app.listen(port)
+
+// Catch-all route must come AFTER API routes
+app.get("*", (_, res) => {
+	res.sendFile(
+		path.join(process.cwd(), "./static/index.html"),
+		(err) => {
+			if(err) {
+				res.status(500).send(err)
+			}
+		}
+	)
+})
+
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+})

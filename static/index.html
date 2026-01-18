@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/7617875c1f.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
@@ -32,7 +35,7 @@
                         <h1>Hi, I'm <span>Atouhami</span><br>ali From Morocco</h1>
                     </div>
                     <div  data-aos="fade-up-left" class="col1">
-                        <img src="images/milomanti7ox.jpg" >
+                        <img src="images/milomanti7ox.jpg" alt="Atouhami Ali - Full Stack Developer">
                     </div>
                 </div>
             </div>
@@ -47,9 +50,9 @@
                     <h3 class="sub-title1">Full stack web devloper </h3>
                     <p class="p">I spent my last years training as a digital development intern in which I had an experience that allowed me to obtain soft skills and hard skills.</p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('technologies')">Technologies I work with</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                        <p class="tab-links" onclick="opentab('interest')">Interest</p>
+                        <p class="tab-links active-link" data-tab="technologies">Technologies I work with</p>
+                        <p class="tab-links" data-tab="education">Education</p>
+                        <p class="tab-links" data-tab="interest">Interest</p>
                     </div>
                     <div class="tab-contents active-tab" id="technologies">
                         <ul>
@@ -80,7 +83,7 @@
                     </div>
                 </div>
                 <div data-aos="fade-up-left" class="col-1">
-                    <img src="images/image.jpeg">
+                    <img src="images/image.jpeg" alt="About Atouhami Ali">
                 </div>
             </div>
         </div>
@@ -115,26 +118,34 @@
             <!-- <h5>My recent work</h5> -->
             <div class="work-list">
                 <div data-aos="flip-right"  class="work">
-                    <img src="images/gestion_stock_pic.png">
+                    <img src="images/gestion_stock_pic.png" alt="Gestion de Stock Project">
                     <div class="layer">
-                        <h3>Gestion Stock</h3>
-                        <p> an app about managing,delivering stocks and more ... </p>
+                        <h3>Gestion de Stock</h3>
+                        <p> 
+                            une application pour gérer et livrer les stocks, et bien plus encore...
+                        </p>
                         <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div data-aos="flip-down" class="work">
-                    <img src="images/offre.jpg">
+                    <img src="images/TMS.png" alt="Gestion de Transport Project">
                     <div class="layer">
-                        <h3>website for health</h3>
-                        <p> a website where you can find jobs at health fields</p>
+                        <h3>Gestion de Transport</h3>
+                        <p> Application de gestion du transport avec accès
+                            basé sur les rôles (ADMIN , DRIVER , CLIENT), incluant la gestion des trajets et des
+                            expéditions, le suivi, les notifications et la maintenance des
+                            véhicules.
+                        </p>
                         <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div data-aos="flip-left" class="work">
-                    <img src="images/images.jfif">
+                    <img src="images/images.jfif" alt="School Management System Project">
                     <div class="layer">
                         <h3>School Managment System</h3>
-                        <p> an app almost about everything related to school </p>
+                        <p> 
+                            une application qui couvre presque tout ce qui concerne l'école
+                        </p>
                         <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
@@ -152,14 +163,12 @@
                     <p><i class="fa-solid fa-paper-plane"></i>mohamedaliatouhami2002@gmail.com</p>
                     <p><i class="fa-brands fa-whatsapp"></i>+212-707582164</p>
                     <div class="sociale-icones">
-                        <a href="https://github.com/mohamed-ali-atouhami"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://linkedin.com/in/mohamed-ali-atouhami"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/mohamed-ali-atouhami" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/mohamed-ali-atouhami" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
-                    <a target="_blank" href="images/CV.pdf" download class="btn btn2">Download CV</a>
+                    <a target="_blank" href="images/CV_FR last-one.pdf" download class="btn btn2">Download CV</a>
                 </div>
-                <!-- <div data-aos="fade-up-left"  class="contact-right">
+                <div data-aos="fade-up-left"  class="contact-right">
                     <form id="forma">
                         <input type="text" id="input-name" name="Name" placeholder="Enter your Name" required>
                         <input type="email" id="input-email" name="Email" placeholder="Enter your Email" required>
@@ -167,7 +176,7 @@
                         <button type="submit" id="submit-email" class="btn btn2">Submit</button>
                     </form>
                     <span id="msg"></span>
-                </div> -->
+                </div>
             </div>
         </div>
         <div class="copy-right">
@@ -175,18 +184,29 @@
         </div>
     </div>
     <script>
-        var tablinks= document.getElementsByClassName("tab-links");
-        var tabcontents=document.getElementsByClassName("tab-contents");
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link")
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab")
-            }
-            event.currentTarget.classList.add("active-link")
-            document.getElementById(tabname).classList.add("active-tab")
-        }
+        // Tab switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tablinks = document.getElementsByClassName("tab-links");
+            const tabcontents = document.getElementsByClassName("tab-contents");
+            
+            Array.from(tablinks).forEach(tablink => {
+                tablink.addEventListener('click', function(event) {
+                    const tabname = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all tabs
+                    Array.from(tablinks).forEach(link => {
+                        link.classList.remove("active-link");
+                    });
+                    Array.from(tabcontents).forEach(content => {
+                        content.classList.remove("active-tab");
+                    });
+                    
+                    // Add active class to clicked tab
+                    this.classList.add("active-link");
+                    document.getElementById(tabname).classList.add("active-tab");
+                });
+            });
+        });
     </script>
 
     <script>
