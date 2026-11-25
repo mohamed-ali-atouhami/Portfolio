@@ -3,17 +3,15 @@ export const content = {
   shortName: "Atouhami",
   role: "Full-stack developer",
   location: "Morocco",
-  availability: "Available for work",
   summary: "I build web products from the interface to the database.",
-  bio: "The last few years were digital development training and internships. That is where the soft skills and the hard skills came from.",
-  interests: ["Travel", "Sport", "Chess"],
+  bio: "I'm a Full Stack Web Developer with a background in Computer Science and hands-on experience building web applications. I enjoy turning ideas into practical digital solutions, from intuitive interfaces to robust backend systems.",
   about: {
     eyebrow: "Introduction",
     title: "About me",
     cards: [
       {
         title: "Languages",
-        description: "HTML, CSS, JavaScript, React, Next.js, Vue.",
+        description: "JavaScript, React, Next.js, Vue, Node.js, Express, PHP, Laravel.",
       },
       {
         title: "Education",
@@ -35,7 +33,7 @@ export const content = {
     src: "/images/about.jpeg",
     alt: "Mohamed Ali Atouhami",
   },
-  cv: "/cv.pdf",
+  cv: "/mohamed ali's CV.pdf",
   contactLead: {
     eyebrow: "Connect with me",
     title: "Get in touch",
@@ -56,20 +54,6 @@ export const content = {
     { label: "Services", href: "#services" },
     { label: "Work", href: "#work" },
     { label: "Contact", href: "#contact" },
-  ],
-  stack: [
-    {
-      title: "Frontend",
-      items: ["HTML", "CSS", "Bootstrap", "Tailwind", "JavaScript", "React", "Next.js", "Vue"],
-    },
-    {
-      title: "Backend",
-      items: ["Node.js", "Express", "PHP", "Laravel", "Java", "Spring Boot"],
-    },
-    {
-      title: "Data and tools",
-      items: ["MySQL", "PostgreSQL", "MongoDB", "Prisma", "Docker", "Linux", "REST"],
-    },
   ],
   services: [
     {
